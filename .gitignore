@@ -1,4 +1,10 @@
-﻿PerformanceMonitor/bin
-PerformanceMonitor/obj
-PerformanceMonitor/Properties
-.vs
+﻿*.suo
+*.user
+*.ncb
+Debug/
+Release/
+CodeAnalyst/
+ipch/
+*.sdf
+*.opensdf
+
