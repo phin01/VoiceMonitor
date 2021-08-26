@@ -29,7 +29,10 @@ namespace PerformanceMonitor
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.lblSpeech = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // lblSpeech
@@ -42,14 +45,22 @@ namespace PerformanceMonitor
             this.lblSpeech.TabIndex = 0;
             this.lblSpeech.Text = "label1";
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 255);
+            this.ClientSize = new System.Drawing.Size(458, 402);
             this.Controls.Add(this.lblSpeech);
             this.Name = "frmHome";
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
+            this.Resize += new System.EventHandler(this.frmHome_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,6 +69,7 @@ namespace PerformanceMonitor
         #endregion
 
         private System.Windows.Forms.Label lblSpeech;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 
